@@ -1,0 +1,21 @@
+function goodKeys(obj, callback){
+  let arr = [];
+  for (let key in obj){
+    if(callback(obj[k])){
+      arr.push(key)
+    }
+  }
+  return ar
+};
+
+const student = {
+  name: "Alice",
+  age: 22,
+  grade: 85,
+  city: "New York"
+};
+
+const isNumber = value => typeof value === "number";
+
+const keys = goodKeys(student, isNumber);
+console.log(keys); // Expected output: ["age", "grade"]
